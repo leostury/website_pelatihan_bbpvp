@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
-import ThemeToggleBtn from "./themeToggleBtn";
+import ThemeToggleBtn from "./ThemeToggleBtn";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,8 +16,6 @@ const Navbar = ({ theme, setTheme }) => {
           sidebarOpen ? "max-sm:right-0" : "max-sm:-right-80"
         }`}
       >
-        <ThemeToggleBtn theme={theme} setTheme={setTheme} />
-
         <img
           src={assets.close_icon}
           className="w-5 absolute right-4 top-4 sm:hidden cursor-pointer"
@@ -39,7 +37,7 @@ const Navbar = ({ theme, setTheme }) => {
           Services
         </a>
         <a
-          href="#our-works"
+          href="#our-work"
           className="sm:hover:border-b"
           onClick={() => setSidebarOpen(false)}
         >
@@ -63,6 +61,7 @@ const Navbar = ({ theme, setTheme }) => {
         />
       </div>
 
+      <ThemeToggleBtn theme={theme} setTheme={setTheme} />
       <a
         href="#contact-us"
         className="text-sm max-sm:hidden flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 transition-all"
