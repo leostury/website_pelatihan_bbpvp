@@ -1,8 +1,37 @@
 import React from "react";
 import Title from "./Title";
 import assets from "../assets/assets";
+import toast, { LoaderIcon } from "react-hot-toast";
 
 const ContactUs = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    // cb6c4642-a344-4dc8-baf5-158273a9fd3a
+    formData.append("access_key", "cb6c4642-a344-4dc8-baf5-158273a9fd3a");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        toast.success("Thank you form your submission");
+        console.log(`hasil : ${data}`);
+        event.target.reset();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <div
       id="contact-us"
@@ -13,7 +42,10 @@ const ContactUs = () => {
         desc="From strategy to execution, we craft digital solutions that move your business forward."
       />
 
-      <form className="grid sm:grid-cols-2 gap-3 sm: gap-5 max-w-2xl w-full">
+      <form
+        onSubmit={onSubmit}
+        className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full"
+      >
         <div>
           <p className="mb-2 text-sm font-medium">Your Name</p>
           <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
