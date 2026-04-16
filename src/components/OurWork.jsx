@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import assets from "../assets/assets";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const OurWork = () => {
   const workData = [
@@ -27,7 +27,7 @@ const OurWork = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      transtion={{ staggerchildren: 0.2 }}
+      transition={{ staggerChildren: 0.2 }}
       viewport={{ once: true }}
       id="our-work"
       className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
