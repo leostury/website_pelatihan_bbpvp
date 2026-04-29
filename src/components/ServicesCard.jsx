@@ -24,7 +24,7 @@ const ServicesCard = ({ service, index }) => {
       onMouseMove={handleMouseMove}
     >
       <div
-        className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-80 h-80 absolute z-0 transition-opacity duration-500 mix-blend-lighten ${visible ? "opacity-70" : "opacity-0"}`}
+        className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 w-80 h-80 absolute z-0 transition-opacity duration-500 mix-blend-lighten ${visible ? "opacity-70" : "opacity-0"}`}
         style={{
           top: position.y - 150,
           left: position.x - 150,

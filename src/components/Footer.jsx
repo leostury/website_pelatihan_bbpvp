@@ -4,95 +4,131 @@ import { motion } from "framer-motion";
 
 const Footer = ({ theme }) => {
   return (
-    <div className="bg-slate-50 dark:bg-gray-900 pt-10 mt-20 sm:mt-40 px-4 sm:px-10 lg:px-24 xl:px-40">
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transtion={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex justify-between items-start lg:items-center max-lg:flex-col gap-10"
-      >
-        <motion.div className="space-y-5 text-sm text-gray-700 dark:text-gray-400">
-          <img
-            src={theme === "dark" ? assets.logo_dark : assets.logo}
-            className="w-32 sm:w-44"
-            alt="logo"
-          />
-
-          <p className="max-w-md">
-            From strategy to execution, we craft digital solutions that move
-            your business forward.
-          </p>
-
-          <ul className="flex gap-6 flex-wrap">
-            <li>
-              <a href="#hero" className="hover:text-primary">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="hover:text-primary">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#our-work" className="hover:text-primary">
-                Our Work
-              </a>
-            </li>
-            <li>
-              <a href="#contact-us" className="hover:text-primary">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transtion={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-gray-600 dark:text-gray-400 max-w-md w-full"
-        >
-          <h3 className="font-semibold">Subscribe to our newsletter</h3>
-
-          <p className="text-sm mt-2 mb-6">
-            The latest news, articles, and resources, sent to your inbox weekly
-          </p>
-
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full p-3 text-sm outline-none rounded border border-gray-300 dark:border-gray-500 bg-transparent"
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="bg-white dark:bg-slate-900 pt-20 px-6 lg:px-24 border-t border-slate-100 dark:border-slate-800"
+    >
+      <div className="max-w-[1600px] mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 lg:gap-24 mb-20">
+          {/* SISI KIRI: Brand & Deskripsi */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8 max-w-md"
+          >
+            <img
+              src={assets.logo_blk}
+              className="w-48 lg:w-56"
+              alt="BBPVP Bandung Logo"
             />
-            <button className="bg-primary text-white rounded px-6">
-              Subscribe
-            </button>
+            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-medium">
+              Balai Besar Pelatihan Vokasi dan Produktivitas Bandung. Membangun
+              tenaga kerja kompeten, inovatif, dan siap bersaing di industri
+              global.
+            </p>
+          </motion.div>
+
+          {/* SISI TENGAH: Link Cepat */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-12 lg:gap-24">
+            <div className="space-y-6">
+              <h4 className="font-black text-slate-900 dark:text-white uppercase tracking-widest text-xs">
+                Navigasi
+              </h4>
+              <ul className="space-y-4 text-slate-500 dark:text-slate-400 font-bold">
+                <li>
+                  <a
+                    href="#hero"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Beranda
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pelatihan"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Program Pelatihan
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pengumuman"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Kabar Terbaru
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pendaftaran"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Daftar Sekarang
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-6">
+              <h4 className="font-black text-slate-900 dark:text-white uppercase tracking-widest text-xs">
+                Kontak
+              </h4>
+              <ul className="space-y-4 text-slate-500 dark:text-slate-400 font-bold">
+                <li>Jl. Gatot Subroto No.170</li>
+                <li>Kota Bandung, Jawa Barat</li>
+                <li>(022) 7312564</li>
+                <li>bbpvpbandung@kemnaker.go.id</li>
+              </ul>
+            </div>
           </div>
-        </motion.div>
-      </motion.div>
 
-      <hr className="border-gray-300 dark:border-gray-600 my-8" />
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transtion={{ duration: 0.5, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="pb-6 text-sm text-gray-500 flex flex-col sm:flex-row justify-center items-center gap-4"
-      >
-        <p>Copyright 2025 © agency.ai - all rights reserved</p>
-
-        <div className="flex gap-4">
-          <img src={assets.facebook_icon} alt="" />
-          <img src={assets.twitter_icon} alt="" />
-          <img src={assets.instagram_icon} alt="" />
-          <img src={assets.linkedin_icon} alt="" />
+          {/* SISI KANAN: Newsletter (Style Modern) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-slate-50 dark:bg-slate-800/50 p-10 rounded-[3rem] w-full lg:max-w-md border border-slate-100 dark:border-slate-800"
+          >
+            <h3 className="font-black text-2xl text-slate-900 dark:text-white tracking-tight mb-4">
+              Dapatkan Info Terbaru
+            </h3>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 font-medium">
+              Berlangganan untuk mendapatkan jadwal pendaftaran Batch terbaru
+              langsung di email Anda.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Email Anda"
+                className="flex-1 p-4 px-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 outline-none focus:border-blue-600 transition-all font-bold text-sm"
+              />
+              <button className="bg-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:bg-slate-900 transition-all active:scale-95 shadow-lg shadow-blue-200 dark:shadow-none uppercase tracking-widest text-xs">
+                Gabung
+              </button>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-    </div>
+
+        <hr className="border-slate-100 dark:border-slate-800" />
+
+        {/* BOTTOM FOOTER */}
+        <div className="py-10 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm font-bold text-slate-400">
+          <p>© 2026 BBPVP Bandung - Kementerian Ketenagakerjaan RI.</p>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-blue-600">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-blue-600">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

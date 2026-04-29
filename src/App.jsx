@@ -8,6 +8,13 @@ import Teams from "./components/Teams";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import Pelatihan from "./components/Pelatihan";
+import FeatureBar from "./components/FeatureBar"; // Pastikan path filenya benar
+import Pengumuman from "./components/Pengumuman";
+import ProgramInfo from "./components/ProgramInfo";
+import AlurPendaftaran from "./components/AlurPendaftaran";
+import RegistrationForm from "./components/RegistrationForm";
+import FormPendaftaran from "./components/FormPendaftaran";
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -50,21 +57,29 @@ const App = () => {
   }, []);
 
   return (
-    <div className="dark:bg-black relative">
+    <div className="dark:bg-black relative w-full overflow-x-hidden">
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
-      <TrustedBy />
-      <Services />
-      <OurWork />
-      <Teams />
+      {/* <FeatureBar /> */}
+      <ProgramInfo />
+      <Pengumuman />
+
+      <Pelatihan />
+      {/* <TrustedBy />
+      <Services /> */}
+      <AlurPendaftaran />
+      <FormPendaftaran />
+      {/* <RegistrationForm /> */}
+      {/* <OurWork /> */}
+      {/* <Teams /> */}
       <ContactUs />
       <Footer theme={theme} />
 
       {/* crusor ring */}
       <div
         ref={outlineRef}
-        className="fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 h-10 w-10 rounded-full border border-blue-600 pointer-events-none z-[9999]"
         style={{ transition: "transform 0.1s ease-out" }}
       ></div>
 
@@ -72,7 +87,7 @@ const App = () => {
 
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 h-3 w-3 rounded-full bg-blue-700 pointer-events-none z-[9999]"
       ></div>
     </div>
   );
