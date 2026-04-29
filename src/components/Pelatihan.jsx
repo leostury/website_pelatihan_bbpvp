@@ -6,21 +6,21 @@ const programData = [
   {
     title: "Web Development",
     desc: "Kuasai React JS, Tailwind, dan Node JS untuk karir Fullstack Developer.",
-    img: assets.slide_1, // Gunakan assets agar aman
+    img: assets.web,
     cat: "Teknologi",
     durasi: "320 Jam",
   },
   {
     title: "Desain Grafis",
     desc: "Seni visual digital menggunakan Adobe Illustrator dan Photoshop.",
-    img: assets.slide_2,
+    img: assets.grafik,
     cat: "Desain",
     durasi: "280 Jam",
   },
   {
     title: "Digital Marketing",
     desc: "Strategi SEO, Ads, dan konten kreatif untuk pertumbuhan bisnis.",
-    img: assets.slide_3,
+    img: assets.digital,
     cat: "Bisnis",
     durasi: "240 Jam",
   },

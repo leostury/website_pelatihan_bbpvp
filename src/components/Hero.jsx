@@ -119,10 +119,14 @@ const Hero = () => {
       >
         <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] py-8 px-10 border border-slate-100 flex flex-wrap justify-between items-center gap-8">
           {[
-            { img: "computer-lab.png", t: "Lab Modern", d: "Standar Industri" },
-            { img: "teacher.png", t: "Instruktur Ahli", d: "Praktisi Senior" },
             {
-              img: "certificate.png",
+              img: assets.computer_lab,
+              t: "Lab Modern",
+              d: "Standar Industri",
+            },
+            { img: assets.teacher, t: "Instruktur Ahli", d: "Praktisi Senior" },
+            {
+              img: assets.certificate,
               t: "Sertifikat BNSP",
               d: "Lisensi Kompetensi",
             },

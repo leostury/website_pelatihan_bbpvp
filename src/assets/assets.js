@@ -30,9 +30,21 @@ import menu_icon_dark from "./menu_icon_dark.svg";
 import sun_icon from "./sun_icon.svg";
 import moon_icon from "./moon_icon.svg";
 import logo_blk from "./logo.png";
+import computer_lab from "./computer-lab.png";
+import teacher from "./teacher.png";
+import certificate from "./certificate.png";
+import location from "./location.png";
+import clock from "./clock.png";
+import course2 from "./course2.png";
 import slide_1 from "./slide_1.png";
 import slide_2 from "./slide_2.png";
-import slide_3 from "./slide_2.png";
+import slide_3 from "./slide_3.png";
+import slide1_jpg from "./slide1.jpg";
+import slide2_jpg from "./slide2.jpg";
+import slide3_jpg from "./slide3.jpg";
+import web from "./web.jpg";
+import grafik from "./grafik.jpg";
+import digital from "./digital.jpg";
 
 export const company_logos = [
   microsoft_logo,
@@ -73,6 +85,18 @@ const assets = {
   slide_1,
   slide_2,
   slide_3,
+  computer_lab,
+  teacher,
+  certificate,
+  location,
+  clock,
+  course2,
+  slide1_jpg,
+  slide2_jpg,
+  slide3_jpg,
+  web,
+  grafik,
+  digital,
 };
 
 export default assets;

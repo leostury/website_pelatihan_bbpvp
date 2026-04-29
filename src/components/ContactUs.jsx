@@ -56,7 +56,7 @@ const ContactUs = () => {
             <div className="flex items-center gap-6">
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-2xl shadow-xl">
                 <img
-                  src="src/assets/location.png"
+                  src={assets.location}
                   className="w-8 h-8 object-contain"
                 ></img>
               </div>
@@ -72,7 +72,7 @@ const ContactUs = () => {
             <div className="flex items-center gap-6 ">
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-2xl shadow-xl">
                 <img
-                  src="src/assets/clock.png"
+                  src={assets.clock}
                   className="w-8 h-8 object-contain"
                   alt="clock"
                 />
